@@ -46,7 +46,7 @@ const DealSection = () => {
           </div>
         </div>
         <div
-          className="border flex justify-center items-center gap-4 p-3 bg-[#E76D66] text-white rounded-xl"
+          className="border flex justify-center items-center gap-4 p-3 bg-[#8AA5A0] text-white rounded-xl"
           data-aos="fade-down"
         >
           <div className="text-6xl ">
