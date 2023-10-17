@@ -1,48 +1,46 @@
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 const AddCoffee = () => {
   const handleCoffee = (event) => {
     event.preventDefault();
     const form = event.target;
-    const photo = form.photo.value;
+    const image = form.image.value;
     const name = form.name.value;
-    const quantity = form.quantity.value;
-    const supplier = form.supplier.value;
-    const taste = form.taste.value;
-    const details = form.details.value;
-    const category = form.category.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const description = form.description.value;
+    const rating = form.rating.value;
     const newCoffee = {
       name,
-      quantity,
-      supplier,
-      taste,
-      details,
-      category,
-      photo,
+      type,
+      price,
+      description,
+      rating,
+      image,
     };
     console.log(newCoffee);
 
-    fetch(
-      "https://coffee-store-server-69gxgpo3p-rabby-webs-projects.vercel.app/coffee",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newCoffee),
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.insertedId) {
-          Swal({
-            title: "Successfully Added Coffee!",
-            text: "Successfully Added Coffee to MongoDB!",
-            icon: "success",
-          });
-        }
-      });
+    // fetch(
+    //   "https://coffee-store-server-69gxgpo3p-rabby-webs-projects.vercel.app/coffee",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //     body: JSON.stringify(newCoffee),
+    //   }
+    // )
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     if (data.insertedId) {
+    //       Swal({
+    //         title: "Successfully Added Coffee!",
+    //         text: "Successfully Added Coffee to MongoDB!",
+    //         icon: "success",
+    //       });
+    //     }
+    //   });
   };
   return (
     <div className="bg-[#F4F3F0] rounded-md p-3 md:p-20 my-6 mx-2">
@@ -82,26 +80,26 @@ const AddCoffee = () => {
         <div className="md:flex">
           <div className="form-control md:w-1/2 mx-2">
             <label className="label">
-              <span className="label-text text-lg text-black">Supplier</span>
+              <span className="label-text text-lg text-black">Type</span>
             </label>
             <label className="">
               <input
                 type="text"
-                name="supplier"
-                placeholder="Supplier"
+                name="type"
+                placeholder="Product Type"
                 className="input input-bordered w-full"
               />
             </label>
           </div>
           <div className="form-control md:w-1/2 mx-2">
             <label className="label ">
-              <span className="label-text text-lg text-black">Taste</span>
+              <span className="label-text text-lg text-black">Price</span>
             </label>
             <label className="">
               <input
                 type="text"
-                name="taste"
-                placeholder="Taste"
+                name="price"
+                placeholder="Product Price"
                 className="input input-bordered w-full"
               />
             </label>
@@ -111,26 +109,28 @@ const AddCoffee = () => {
         <div className="md:flex">
           <div className="form-control md:w-1/2 mx-2">
             <label className="label">
-              <span className="label-text text-lg text-black">Category</span>
+              <span className="label-text text-lg text-black">
+                Short description
+              </span>
             </label>
             <label className="">
               <input
                 type="text"
-                name="category"
-                placeholder="Category"
+                name="description"
+                placeholder="Short Description"
                 className="input input-bordered w-full"
               />
             </label>
           </div>
           <div className="form-control md:w-1/2 mx-2">
             <label className="label ">
-              <span className="label-text text-lg text-black">Details</span>
+              <span className="label-text text-lg text-black">Rating</span>
             </label>
             <label className="">
               <input
                 type="text"
-                name="details"
-                placeholder="Details"
+                name="rating"
+                placeholder="Rating"
                 className="input input-bordered w-full"
               />
             </label>
@@ -140,7 +140,7 @@ const AddCoffee = () => {
         <div className="text-center">
           <input
             type="submit"
-            value="Add Coffee"
+            value="Add Product"
             className="bg-[#E76D66] text-white w-1/2 m-2 rounded-lg py-3 px-4 my-5 text-xl font-semibold"
           />
         </div>
