@@ -6,13 +6,15 @@ const Banner = () => {
         <div className="text-center bg-[#1f07255e] h-full w-full flex items-center justify-center">
           <div className="flex flex-col-reverse  md:flex-row justify-between items-center gap-5 p-2">
             <div className=" space-y-3">
-              <h1 className="text-3xl font-bold text-white">DevConf 23</h1>
+              <h1 className="text-3xl font-bold text-[#E76D66]">
+                Discount <span className="text-orange-700">20%</span>
+              </h1>
               <h2 className="text-3xl md:text-5xl font-bold inline-block p-2 rounded-md bg-[#1306098e] text-[#E76D66]">
                 Digital Store
               </h2>
               <p className="text-white text-lg">
-                Join us at DevConf 23 to learn from the best and brightest minds
-                in programming, including our esteemed guest speakers.
+                A discount is a reduction in the price of a service or a
+                product.
               </p>
               <button className="bg-[#E76D66] text-white text-xl font-semibold py-3 px-5 rounded flex justify-center items-center mb-6 mx-auto md:text-block">
                 Explore More{" "}
