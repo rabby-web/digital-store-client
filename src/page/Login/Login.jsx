@@ -3,7 +3,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import Social from "../Social/Social";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
@@ -24,12 +24,7 @@ const Login = () => {
         console.log(result.user);
         e.target.reset();
         navigate(location.state ? location?.state : "/");
-        // Swal({
-        //   title: "Success",
-        //   text: "Login Your Account Successfully",
-        //   icon: "success",
-        //   button: "Login",
-        // });
+        Swal.fire("Log In", "Successfully Login Now", "success");
       })
       .catch((error) => {
         console.error(error);

@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-// import swal from "sweetalert";
 
 const Social = () => {
   const { googleUserCreate } = useContext(AuthContext);
@@ -14,12 +13,7 @@ const Social = () => {
     googleUserCreate()
       .then((result) => {
         console.log(result);
-        Swal({
-          title: "Success",
-          text: "Login Successfully",
-          icon: "success",
-          button: "Login Complete",
-        });
+        Swal.fire("Log In", "Successfully Login Now", "success");
         navigate(location.state ? location?.state : "/");
       })
       .catch((error) => {
