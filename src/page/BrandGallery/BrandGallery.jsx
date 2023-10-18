@@ -9,7 +9,7 @@ const BrandGallery = ({ oneBrand }) => {
       <div className="relative flex border flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
         <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
           <img
-            className="h-52 object-cover"
+            className="h-64 object-cover"
             src={image}
             alt="ui/ux review check"
           />
@@ -38,7 +38,7 @@ const BrandGallery = ({ oneBrand }) => {
             </p>
           </div>
 
-          <div className="flex justify-between text-lg text-sky-800">
+          <div className="flex justify-between text-lg text-[#E76D66]">
             <h1 className="font-semibold">Brand: {brand}</h1>
             <h1 className="font-semibold">Price: {price} $</h1>
           </div>
@@ -51,7 +51,7 @@ const BrandGallery = ({ oneBrand }) => {
           <Link>
             <button
               type="button"
-              className="text-white bg-sky-700 hover:bg-sky-800 border border-sky-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              className="text-white bg-[#E76D66] hover:bg-[#E76D66]border border-[#E76D66]ont-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
               Details
             </button>
@@ -60,7 +60,7 @@ const BrandGallery = ({ oneBrand }) => {
           <Link>
             <button
               type="button"
-              className="text-sky-700 hover:text-white border border-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              className="text-text-[#E76D66] hover:text-white border border-[#E76D66] hover:bg-[#E76D66] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
               Update
             </button>
