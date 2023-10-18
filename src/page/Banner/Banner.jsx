@@ -2,7 +2,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 const Banner = () => {
   return (
     <div>
-      <div className="w-full h-[60vh] justify-center bg-[url(https://img.freepik.com/free-photo/motherboard-circuit-technology-remixed-media_53876-124660.jpg?w=1380&t=st=1697553111~exp=1697553711~hmac=c04572622c3b165cd8dab26576c564011892e08c1a3394c772480a86d3e7614d)] bg-no-repeat bg-cover bg-center">
+      <div className="w-full h-[70vh] justify-center bg-[url(https://img.freepik.com/free-photo/motherboard-circuit-technology-remixed-media_53876-124660.jpg?w=1380&t=st=1697553111~exp=1697553711~hmac=c04572622c3b165cd8dab26576c564011892e08c1a3394c772480a86d3e7614d)] bg-no-repeat bg-cover bg-center">
         <div className="text-center bg-[#1f07255e] h-full w-full flex items-center justify-center">
           <div className="flex flex-col-reverse  md:flex-row justify-between items-center gap-5 p-2">
             <div className=" space-y-3">

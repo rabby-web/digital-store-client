@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import BrandCarousel from "../BrandCarousel/BrandCarousel";
 
 const Brand = () => {
   const [gBrand, setGBrand] = useState({});
 
   const totalBrand = useLoaderData();
   const brand_name = useParams();
-  console.log(totalBrand, brand_name);
+  //   console.log(totalBrand, brand_name);
 
   useEffect(() => {
     const filterBrand = totalBrand.find(
@@ -20,6 +21,9 @@ const Brand = () => {
   return (
     <div>
       <h2>Brand: {gBrand.brand_name}</h2>
+      <div>
+        <BrandCarousel gBrand={gBrand}></BrandCarousel>
+      </div>
     </div>
   );
 };
