@@ -1,9 +1,12 @@
 import { useState } from "react";
 
 const AddProduct = () => {
-  const [selectedValue, setSelectedValue] = useState("");
+  const [brand, setBrand] = useState("");
+  const handleSelectChange = (event) => {
+    setBrand(event.target.value);
+  };
 
-  const handleAddProduct = (event) => {
+  const handleAddProduct = async (event) => {
     event.preventDefault();
     const form = event.target;
     const image = form.image.value;
@@ -19,14 +22,26 @@ const AddProduct = () => {
       description,
       rating,
       image,
-      selectedValue,
+      brand,
     };
-
     console.log(product);
-  };
-
-  const handleSelectChange = (event) => {
-    setSelectedValue(event.target.value);
+    try {
+      const response = await fetch("http://localhost:5000/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      });
+      const result = await response.json();
+      console.log(result);
+      if (result.acknowledged) {
+        alert("Data posted successfully");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    form.reset("");
   };
 
   return (
@@ -100,12 +115,27 @@ const AddProduct = () => {
             </label>
             <select
               className="input input-bordered w-full"
-              value={selectedValue}
+              value={brand}
               onChange={handleSelectChange}
             >
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
+              <option className="p-1 border" value="Samsung">
+                Samsung
+              </option>
+              <option className="p-1 border" value="Apple">
+                Apple
+              </option>
+              <option className="p-1 border" value="Microsoft">
+                Microsoft
+              </option>
+              <option className="p-1 border" value="SONY">
+                SONY
+              </option>
+              <option className="p-1 border" value="LG">
+                LG
+              </option>
+              <option className="p-1 border" value="Panasonic">
+                Panasonic
+              </option>
             </select>
           </div>
 
