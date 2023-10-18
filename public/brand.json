@@ -1,0 +1,51 @@
+[
+    {
+      "id": "1",
+      "brand_name": "Apple",
+      "img": "https://i.ibb.co/W0hhQr0/apple.png",
+      "slider_1": "brand_x_slider_1.jpg",
+      "slider_2": "brand_x_slider_2.jpg",
+      "slider_3": "brand_x_slider_3.jpg"
+    },
+    {
+      "id": "2",
+      "brand_name": "Samsung",
+      "img": "https://i.ibb.co/H4YT8gg/Samsung.jpg",
+      "slider_1": "brand_y_slider_1.jpg",
+      "slider_2": "brand_y_slider_2.jpg",
+      "slider_3": "brand_y_slider_3.jpg"
+    },
+    {
+      "id": "3",
+      "brand_name": "Microsoft",
+      "img": "https://i.ibb.co/XJN3xN9/microsoft.jpg",
+      "slider_1": "brand_z_slider_1.jpg",
+      "slider_2": "brand_z_slider_2.jpg",
+      "slider_3": "brand_z_slider_3.jpg"
+    },
+    {
+      "id": "4",
+      "brand_name": "Sony",
+      "img": "https://i.ibb.co/HD4CCQB/sony.png",
+      "slider_1": "brand_w_slider_1.jpg",
+      "slider_2": "brand_w_slider_2.jpg",
+      "slider_3": "brand_w_slider_3.jpg"
+    },
+    {
+      "id": "5",
+      "brand_name": "Lg",
+      "img": "https://i.ibb.co/q7bgX0v/lg.png",
+      "slider_1": "brand_v_slider_1.jpg",
+      "slider_2": "brand_v_slider_2.jpg",
+      "slider_3": "brand_v_slider_3.jpg"
+    },
+    {
+      "id": "6",
+      "brand_name": "Panasonic",
+      "img": "https://i.ibb.co/fxWW8Rs/panasonic.jpg",
+      "slider_1": "brand_u_slider_1.jpg",
+      "slider_2": "brand_u_slider_2.jpg",
+      "slider_3": "brand_u_slider_3.jpg"
+}
+
+]

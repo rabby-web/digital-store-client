@@ -1,5 +1,3 @@
-// import Swal from "sweetalert2";
-
 const AddCoffee = () => {
   const handleCoffee = (event) => {
     event.preventDefault();
@@ -10,37 +8,29 @@ const AddCoffee = () => {
     const price = form.price.value;
     const description = form.description.value;
     const rating = form.rating.value;
-    const newCoffee = {
+    const brand = form.brand.value;
+    const product = {
       name,
-      type,
       price,
+      type,
       description,
       rating,
       image,
+      brand,
     };
-    console.log(newCoffee);
+    console.log(product);
 
-    // fetch(
-    //   "https://coffee-store-server-69gxgpo3p-rabby-webs-projects.vercel.app/coffee",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "content-type": "application/json",
-    //     },
-    //     body: JSON.stringify(newCoffee),
-    //   }
-    // )
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     if (data.insertedId) {
-    //       Swal({
-    //         title: "Successfully Added Coffee!",
-    //         text: "Successfully Added Coffee to MongoDB!",
-    //         icon: "success",
-    //       });
-    //     }
-    //   });
+    fetch("http://localhost:5000/products", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
   return (
     <div className="bg-[#F4F3F0] rounded-md p-3 md:p-20 my-6 mx-2">
@@ -135,6 +125,19 @@ const AddCoffee = () => {
               />
             </label>
           </div>
+        </div>
+        <div className="form-control md:w-full mx-2">
+          <label className="label ">
+            <span className="label-text text-lg text-black">Brand Name</span>
+          </label>
+          <label className="">
+            <input
+              type="text"
+              name="brand"
+              placeholder="Brand Name"
+              className="input input-bordered w-full"
+            />
+          </label>
         </div>
 
         <div className="text-center">

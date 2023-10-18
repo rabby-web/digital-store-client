@@ -5,6 +5,7 @@ import Register from "../page/Register/Register";
 import Home from "../page/Home/Home";
 import AddProduct from "../page/AddProduct/AddProduct";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Brand from "../page/Brand/Brand";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("/brand.json"),
+      },
+      {
+        path: "/brand/:brand_name",
+        element: <Brand></Brand>,
+        loader: () => fetch("/brand.json"),
       },
       {
         path: "/addProduct",
