@@ -18,6 +18,6 @@ const BrandName = ({ brands }) => {
 };
 
 BrandName.propTypes = {
-  brands: PropTypes.object.isRequired,
+  brands: PropTypes.array,
 };
 export default BrandName;

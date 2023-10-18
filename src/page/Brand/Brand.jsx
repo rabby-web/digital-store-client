@@ -15,8 +15,7 @@ const Brand = () => {
 
   useEffect(() => {
     const filterBrand = totalBrand.find(
-      (brand) =>
-        brand.brand_name.toLowerCase() == brand_name.brand_name.toLowerCase()
+      (brand) => brand.brand_name == brand_name.brand_name
     );
 
     setGBrand(filterBrand);
@@ -29,8 +28,7 @@ const Brand = () => {
 
   useEffect(() => {
     const filterData = bProducts.filter(
-      (product) =>
-        product.brand.toLowerCase() == brand_name.brand_name.toLowerCase()
+      (product) => product.brand == brand_name.brand_name
     );
     setFilterProducts(filterData);
   }, [bProducts, brand_name]);
