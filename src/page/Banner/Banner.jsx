@@ -2,13 +2,11 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 const Banner = () => {
   return (
     <div>
-      <div className="w-full h-[70vh] justify-center bg-[url(https://img.freepik.com/free-photo/motherboard-circuit-technology-remixed-media_53876-124660.jpg?w=1380&t=st=1697553111~exp=1697553711~hmac=c04572622c3b165cd8dab26576c564011892e08c1a3394c772480a86d3e7614d)] bg-no-repeat bg-cover bg-center">
+      <div className="w-full h-[70vh] justify-center bg-[url(https://i.ibb.co/YPmBCcs/19256531-6106991.jpg)] bg-no-repeat bg-cover bg-center">
         <div className="text-center bg-[#1f07255e] h-full w-full flex items-center justify-center">
           <div className="flex flex-col-reverse  md:flex-row justify-between items-center gap-5 p-2">
             <div className=" space-y-3">
-              <h1 className="text-3xl font-bold text-[#E76D66]">
-                Discount <span className="text-orange-700">20%</span>
-              </h1>
+              <h1 className="text-3xl font-bold text-white">Discount 20%</h1>
               <h2 className="text-3xl md:text-5xl font-bold inline-block p-2 rounded-md bg-[#1306098e] text-[#E76D66]">
                 Digital Store
               </h2>

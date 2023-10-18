@@ -134,7 +134,7 @@ const AddProduct = () => {
                 LG
               </option>
               <option className="p-1 border" value="Panasonic">
-                Panasonic
+                Toshiba
               </option>
             </select>
           </div>
