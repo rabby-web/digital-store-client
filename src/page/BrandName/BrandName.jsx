@@ -1,4 +1,5 @@
 import BrandCard from "../BrandCard/BrandCard";
+import PropTypes from "prop-types";
 
 const BrandName = ({ brands }) => {
   //   console.log(brands);
@@ -16,4 +17,7 @@ const BrandName = ({ brands }) => {
   );
 };
 
+BrandName.propTypes = {
+  brands: PropTypes.object.isRequired,
+};
 export default BrandName;

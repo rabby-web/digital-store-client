@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const BrandCard = ({ brand }) => {
   const { brand_name, img } = brand || {};
@@ -19,6 +20,10 @@ const BrandCard = ({ brand }) => {
       </Link>
     </div>
   );
+};
+
+BrandCard.propTypes = {
+  brand: PropTypes.object.isRequired,
 };
 
 export default BrandCard;

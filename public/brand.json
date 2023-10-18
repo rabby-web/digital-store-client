@@ -1,19 +1,19 @@
 [
     {
       "id": "1",
-      "brand_name": "Apple",
-      "img": "https://i.ibb.co/W0hhQr0/apple.png",
-      "slider_1": "https://i.ibb.co/fNws2PJ/samsung-1.jpg",
-      "slider_2": "https://i.ibb.co/fNws2PJ/samsung-1.jpg",
-      "slider_3": "https://i.ibb.co/fNws2PJ/samsung-1.jpg"
-    },
-    {
-      "id": "2",
       "brand_name": "Samsung",
       "img": "https://i.ibb.co/H4YT8gg/Samsung.jpg",
       "slider_1": "brand_y_slider_1.jpg",
       "slider_2": "brand_y_slider_2.jpg",
       "slider_3": "brand_y_slider_3.jpg"
+    },
+    {
+      "id": "2",
+      "brand_name": "Apple",
+      "img": "https://i.ibb.co/W0hhQr0/apple.png",
+      "slider_1": "https://is1-ssl.mzstatic.com/image/thumb/tQAjZ49TxWviswDqumNqBw/1679x945sr.webp",
+      "slider_2": "https://img.freepik.com/premium-photo/humpolec-czech-republic-january-14-2022-apple-company-logo-button-web-app-phone_933530-8707.jpg?w=1380",
+      "slider_3": "https://img.freepik.com/premium-psd/realistic-dark-laptop-with-phone-mockup_196418-1179.jpg?w=1380"
     },
     {
       "id": "3",
