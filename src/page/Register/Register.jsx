@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-// import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import Social from "../Social/Social";
 import { Link } from "react-router-dom";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { createUser, profileUpdate } = useContext(AuthContext);
@@ -18,7 +17,6 @@ const Register = () => {
     const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // const accepted = e.target.terms.checked;
     console.log(name, email, password, photo);
     // password validation
     if (password.length < 6) {
@@ -51,12 +49,7 @@ const Register = () => {
             console.error(error);
           });
         // tost
-        // Swal({
-        //   title: "Success",
-        //   text: "Registration Successfully",
-        //   icon: "success",
-        //   button: "Register Complete",
-        // });
+        Swal.fire("Register", "Successfully Register Now", "success");
       })
       .catch((error) => {
         console.error(error);

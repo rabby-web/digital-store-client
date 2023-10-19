@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Update = () => {
   // const [brand, setBrand] = useState('');
@@ -47,7 +48,7 @@ const Update = () => {
       console.log(result);
 
       if (result.acknowledged) {
-        alert("Product updated successfully");
+        Swal.fire("Update", "Successfully Update", "success");
       }
     } catch (error) {
       console.log(error);

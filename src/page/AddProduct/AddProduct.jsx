@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
   const [brand, setBrand] = useState("");
@@ -36,7 +37,7 @@ const AddProduct = () => {
       const result = await response.json();
       console.log(result);
       if (result.acknowledged) {
-        alert("Data posted successfully");
+        Swal.fire("Product Add", "Successfully Product Add", "success");
       }
     } catch (error) {
       console.log(error);

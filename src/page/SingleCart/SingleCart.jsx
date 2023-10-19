@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Swal from "sweetalert2";
 
 const SingleCard = ({ cart, setBrandCarts, brandCarts }) => {
   console.log(brandCarts);
@@ -14,7 +15,7 @@ const SingleCard = ({ cart, setBrandCarts, brandCarts }) => {
       if (result.deletedCount > 0) {
         const filterCart = brandCarts.filter((cart) => cart._id !== _id);
         setBrandCarts(filterCart);
-        alert("Data deleted successfully");
+        Swal.fire("Delete", "Successfully Delete", "success");
       }
     } catch (error) {
       console.log(error);
