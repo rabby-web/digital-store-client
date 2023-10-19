@@ -1,8 +1,29 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 const Nav = () => {
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+  const handleThemeSwich = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   const { user, logOut } = useContext(AuthContext);
   const handleSignOut = () => {
     logOut()
@@ -87,7 +108,7 @@ const Nav = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100 shadow text-black px-4 md:px-10">
+      <div className="navbar dark:bg-black bg-white shadow text-black px-4 md:px-10">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -124,7 +145,25 @@ const Nav = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
+        <div></div>
         <div className="navbar-end ">
+          <div className="mt-1">
+            {theme === "dark" ? (
+              <button
+                onClick={handleThemeSwich}
+                className="text-3xl dark:text-white"
+              >
+                <MdOutlineLightMode />
+              </button>
+            ) : (
+              <button
+                onClick={handleThemeSwich}
+                className="text-3xl dark:text-white"
+              >
+                <MdOutlineDarkMode />
+              </button>
+            )}
+          </div>
           {user ? (
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

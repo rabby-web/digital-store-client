@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 const BrandCarousel = ({ gBrand }) => {
-  console.log(gBrand.slider_1);
   const { slider_1, slider_2, slider_3 } = gBrand || {};
   return (
     <div className="w-3/4 mx-auto h-[60vh]">
