@@ -1,11 +1,12 @@
 # Digital Store
 
-- [Live-Link](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
+## Live-Link: [Digital Store](https://digital-store-bc6d4.web.app/)
 
-## Project Features
+### Project Features
 
-- Firebase Authentication
-- React Router Add
+- Our Digital Store website user can use buying latest digital products.
+- If you can visited website must be registration and login this website
+- You can add product to cart for purchase
 - Responsive for All Device
-- Brands Details
-- Service Section
+- Hear you can see different six type brands products
+- You can added product and delete, update.
