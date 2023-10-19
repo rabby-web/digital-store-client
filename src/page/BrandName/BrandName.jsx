@@ -5,8 +5,8 @@ const BrandName = ({ brands }) => {
   //   console.log(brands);
   return (
     <div>
-      <h2 className="text-center font-semibold text-4xl p-5">
-        Brands Products
+      <h2 className="text-center font-semibold text-4xl p-5 text-black dark:text-white">
+        Company & Brands
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {brands.map((brand) => (
