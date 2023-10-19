@@ -8,9 +8,12 @@ const SingleCard = ({ cart, setBrandCarts, brandCarts }) => {
 
   const hanldeDelete = async (_id) => {
     try {
-      const response = await fetch(`http://localhost:5000/carts/${_id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/carts/${_id}`,
+        {
+          method: "DELETE",
+        }
+      );
       const result = await response.json();
       if (result.deletedCount > 0) {
         const filterCart = brandCarts.filter((cart) => cart._id !== _id);

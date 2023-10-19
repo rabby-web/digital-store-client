@@ -11,13 +11,16 @@ const Details = () => {
     detailsProduct || {};
   const handleAddCart = async (detailsProduct) => {
     try {
-      const response = await fetch("http://localhost:5000/carts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(detailsProduct),
-      });
+      const response = await fetch(
+        "https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/carts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(detailsProduct),
+        }
+      );
       const result = await response.json();
       console.log(result);
 

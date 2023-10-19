@@ -37,13 +37,16 @@ const Update = () => {
     };
 
     try {
-      const response = await fetch(`http://localhost:5000/products/${_id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedProduct),
-      });
+      const response = await fetch(
+        `https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/products/${_id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedProduct),
+        }
+      );
       const result = await response.json();
       console.log(result);
 

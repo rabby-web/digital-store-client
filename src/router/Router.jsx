@@ -30,7 +30,9 @@ const router = createBrowserRouter([
         path: "/products/:id",
         element: <Update></Update>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: "/details/:id",
@@ -40,7 +42,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: "/myCart",

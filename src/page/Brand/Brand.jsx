@@ -21,7 +21,9 @@ const Brand = () => {
     setGBrand(filterBrand);
   }, [totalBrand, brand_name]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch(
+      "https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/products"
+    )
       .then((res) => res.json())
       .then((data) => setBProducts(data));
   }, []);
