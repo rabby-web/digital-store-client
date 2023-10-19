@@ -42,7 +42,7 @@ const Nav = () => {
               ? "pending "
               : isActive
               ? " bg-[#E76D66] text-white"
-              : "text-[#E76D66]"
+              : "text-[#E76D66] dark:text-white"
           }
         >
           Home
@@ -56,7 +56,7 @@ const Nav = () => {
               ? "pending "
               : isActive
               ? " bg-[#E76D66] text-white"
-              : "text-[#E76D66]"
+              : "text-[#E76D66] dark:text-white"
           }
         >
           Add Product
@@ -70,7 +70,7 @@ const Nav = () => {
               ? "pending "
               : isActive
               ? " bg-[#E76D66] text-white"
-              : "text-[#E76D66]"
+              : "text-[#E76D66] dark:text-white"
           }
         >
           My Cart
@@ -84,7 +84,7 @@ const Nav = () => {
               ? "pending "
               : isActive
               ? " bg-[#E76D66] text-white"
-              : "text-[#E76D66]"
+              : "text-[#E76D66] dark:text-white"
           }
         >
           login
@@ -98,7 +98,7 @@ const Nav = () => {
               ? "pending "
               : isActive
               ? " bg-[#E76D66] text-white"
-              : "text-[#E76D66]"
+              : "text-[#E76D66] dark:text-white"
           }
         >
           Register
@@ -108,7 +108,7 @@ const Nav = () => {
   );
   return (
     <div>
-      <div className="navbar dark:bg-black bg-white shadow text-black px-4 md:px-10">
+      <div className="navbar dark:bg-slate-950 bg-white shadow text-black px-4 md:px-10">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -116,7 +116,7 @@ const Nav = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-5 h-5 stroke-current"
+                className="inline-block w-8 h-8 stroke-current dark:text-white "
               >
                 <path
                   strokeLinecap="round"
@@ -147,7 +147,7 @@ const Nav = () => {
         </div>
         <div></div>
         <div className="navbar-end ">
-          <div className="mt-1">
+          <div className="mt-1 mx-2">
             {theme === "dark" ? (
               <button
                 onClick={handleThemeSwich}
@@ -167,7 +167,7 @@ const Nav = () => {
           {user ? (
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-14 rounded-full border-2 border-[#E76D66] ">
+                <div className="w-14 rounded-full border-2 border-[#E76D66] dark:border-white">
                   <img src={user.photoURL} />
                 </div>
               </label>
@@ -196,7 +196,7 @@ const Nav = () => {
           ) : (
             <Link to="/login">
               {" "}
-              <button className="text-[#E76D66] hover:bg-[#E76D66] hover:text-[white] font-semibold px-4 py-2 rounded text-lg border border-[#E76D66]">
+              <button className="text-[#E76D66] hover:bg-[#E76D66] hover:text-[white] font-semibold px-4 py-2 rounded text-lg border border-[#E76D66] dark:border-white">
                 Log In
               </button>{" "}
             </Link>
