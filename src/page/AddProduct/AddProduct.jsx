@@ -122,6 +122,9 @@ const AddProduct = () => {
               value={brand}
               onChange={handleSelectChange}
             >
+              {/* <option className="p-1 border disabled" value="Brand">
+                Brand Name
+              </option> */}
               <option className="p-1 border" value="Samsung">
                 Samsung
               </option>

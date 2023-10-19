@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 const BrandGallery = ({ oneBrand }) => {
@@ -7,10 +6,10 @@ const BrandGallery = ({ oneBrand }) => {
 
   return (
     <div>
-      <div className="relative flex border flex-col rounded-xl bg-white dark:bg-slate-800 dark:text-white bg-clip-border text-gray-700 shadow-lg">
+      <div className="relative flex border flex-col rounded-xl m-2 bg-white dark:bg-slate-800 dark:text-white bg-clip-border text-gray-700 shadow-lg">
         <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
           <img
-            className="h-64 object-cover"
+            className="h-72 w-full object-cover"
             src={image}
             alt="ui/ux review check"
           />
