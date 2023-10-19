@@ -122,9 +122,6 @@ const AddProduct = () => {
               value={brand}
               onChange={handleSelectChange}
             >
-              {/* <option className="p-1 border disabled" value="Brand">
-                Brand Name
-              </option> */}
               <option className="p-1 border" value="Samsung">
                 Samsung
               </option>
@@ -134,13 +131,13 @@ const AddProduct = () => {
               <option className="p-1 border" value="Microsoft">
                 Microsoft
               </option>
-              <option className="p-1 border" value="SONY">
+              <option className="p-1 border" value="Sony">
                 SONY
               </option>
-              <option className="p-1 border" value="LG">
+              <option className="p-1 border" value="Lg">
                 LG
               </option>
-              <option className="p-1 border" value="Panasonic">
+              <option className="p-1 border" value="Toshiba">
                 Toshiba
               </option>
             </select>
