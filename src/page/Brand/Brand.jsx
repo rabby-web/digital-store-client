@@ -22,7 +22,7 @@ const Brand = () => {
   }, [totalBrand, brand_name]);
   useEffect(() => {
     fetch(
-      "https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/products"
+      "https://digital-store-server-940h97fnc-rabby-webs-projects.vercel.app/products"
     )
       .then((res) => res.json())
       .then((data) => setBProducts(data));

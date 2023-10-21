@@ -38,7 +38,7 @@ const Update = () => {
 
     try {
       const response = await fetch(
-        `https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/products/${_id}`,
+        `https://digital-store-server-940h97fnc-rabby-webs-projects.vercel.app/products/${_id}`,
         {
           method: "PUT",
           headers: {

@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         element: <Update></Update>,
         loader: ({ params }) =>
           fetch(
-            `https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/products/${params.id}`
+            `https://digital-store-server-940h97fnc-rabby-webs-projects.vercel.app/products/${params.id}`
           ),
       },
       {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/products/${params.id}`
+            `https://digital-store-server-940h97fnc-rabby-webs-projects.vercel.app/products/${params.id}`
           ),
       },
       {

@@ -12,7 +12,7 @@ const Details = () => {
   const handleAddCart = async (detailsProduct) => {
     try {
       const response = await fetch(
-        "https://digital-store-server-6v0qbtfse-rabby-webs-projects.vercel.app/carts",
+        "https://digital-store-server-940h97fnc-rabby-webs-projects.vercel.app/carts",
         {
           method: "POST",
           headers: {
