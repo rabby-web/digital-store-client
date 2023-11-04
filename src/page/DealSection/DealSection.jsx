@@ -12,9 +12,7 @@ const DealSection = () => {
           </div>
           <div>
             <p className="text-2xl font-semibold">FREE SHIPPING</p>
-            <p className="text-lg font-medium">
-              Nulla vel metus scelerisque ante sollici
-            </p>
+            <p className="text-lg font-medium">Free Shipping All Product.</p>
           </div>
         </div>
         <div
